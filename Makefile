@@ -1,5 +1,5 @@
-OBJECTS = run.o merge.o bubble.o handler.o
-HEADERS = merge.h bubble.h handler.h
+OBJECTS = run.o merge.o bubble.o mkrand.o handler.o
+HEADERS = merge.h bubble.h mkrand.h handler.h
 FLAGS = -std=c99 -lm
 
 default: all 

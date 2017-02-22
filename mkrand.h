@@ -1,6 +1,6 @@
-#ifndef MERGE_H_
-#define MERGE_H_
+#ifndef MKRAND_H_
+#define MKRAND_H_
 
-void mkList(int cnt, char* fName);
+void mkList(long cnt, char* fName);
 
 #endif

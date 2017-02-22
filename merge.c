@@ -22,7 +22,6 @@ void merge(int* A, int p, int q, int r)
 	int* L = malloc((n1+1) * sizeof(int));
 	int* R = malloc((n2+1) * sizeof(int));
 	
-
 	for (int i = 0; i < n1; i++) {
 		L[i] = A[p + i -1 ];	
 	}
@@ -34,8 +33,7 @@ void merge(int* A, int p, int q, int r)
 	R[n2] = INT_MAX;
 	int b = 0;
 	int c = 0;
-
-
+	
 	for (int k = p-1; k < r; k++) {
 		if (L[b] < R[c] ) {
 			A[k] = L[b];
@@ -47,7 +45,6 @@ void merge(int* A, int p, int q, int r)
 	}
 
 	free(L);
-
 	free(R);
 }
 
