@@ -113,10 +113,10 @@ void makeOutput(const char* method, int* A, int LENGTH, double time_taken) {
 	fclose(fq);
 	
 	printf("---------------------------------");
-	printf("\nMethod:\t%s\r\n", method);
+	printf("\r\nMethod:\t%s\r\n", method);
 	printf("Size:\t%d\r\n", LENGTH);
 	printf("Time:\t%f\r\n", time_taken);
-	printf("---------------------------------");
+	printf("---------------------------------\r\n");
 	
 }
 
