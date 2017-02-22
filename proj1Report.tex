@@ -1,0 +1,133 @@
+
+% CS 4710 HW 1
+
+\documentclass{article}
+\usepackage{titling}
+\usepackage{siunitx}	% for scientific notation
+
+\setlength{\droptitle}{-15em}
+
+\begin{document}
+
+\title{CS3130 - Project 1}
+\author{Austin Hester}
+\date{Feb. 22, 2017}
+\maketitle
+
+
+% This makes it so sections aren't automatically numbered
+\makeatletter
+\def\@seccntformat#1{%
+	 \expandafter\ifx\csname c@#1\endcsname\c@section\else
+	  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+%%%	Begin		%%%
+
+%% Results Section %%
+
+\section{Results}
+
+\begin{center}
+\begin{tabular}{ | l | c | r | }
+	\hline
+	 Elements & Merge-sort & Bubble-sort \\ \hline  \hline
+	1500 & 0.000s & 0.000s \\
+	10k & 0.000s & 0.063s \\
+	25k & 0.015s & 0.406s \\
+	50k & 0.031s & 1.578s \\
+	75k & 0.031s & 3.610s \\
+	150k & 0.062s & 14.344s \\
+	250k & 0.109s & 39.969s \\
+	500k & 0.218s & 159.858s \\
+	1m & 0.438s & 639.656s \\
+	2m & 0.922s & 2571.156s \\
+	\hline
+\end{tabular}
+\end{center}
+
+
+%% Analysis Section %%
+
+\section{Analysis}
+
+%	Bubble	%
+
+\subsection{Bubble}
+
+Bubble sort took (literally) exponentially more time as the number of elements increased. \\
+
+	Based on $T(n) = \theta (n^2)$, I got a "sort constant," $c \approx \num{1.566e9}$ from $\frac{n^2}{t}$ \\
+
+Although this "sort constant" varies slightly from run to run, it can be used to successfully predict the time a certain
+execution will take. For example, I was able to predict a bubble sort of 2 million integers would take 2547s using
+the equation $t \approx \frac{n^2}{1.56e9}$.
+
+\subsubsection{Worst-case}
+
+Bubble-sort's worst case is when its elements are in reverse order. \\
+
+	$T(n) = \theta (n^2)$
+
+\subsubsection{Best-case}
+
+Bubble-sort shines when it comes to one thing, sorting already sorted lists. \\
+In this case the algorithm goes through the list once, and does not make a switch. It then 
+terminates based on the sentinel, when no replacements occur. \\
+
+	$T(n) = \theta (n)$
+
+\subsubsection{Average-case}
+
+Average case 
+
+\newpage
+
+%	Merge		%
+
+\subsection{Merge}
+
+Merge sort never exceeded 1 second, even when sorting 2 million integers.\\
+
+From $T(n) = \theta (n \lg{n})$,the "sort constant," $c \approx \num{4.270e7}$ from $\frac{n \lg{n}}{t}$
+
+\subsubsection{Worst-case}
+
+Worst case is: \\
+
+	$T(n) = \theta (n \lg{n})$
+
+\subsubsection{Best-case}
+
+Best case is: \\
+
+	$T(n) = \theta (n \lg{n})$
+
+\subsubsection{Average-case}
+
+Average case is: \\
+
+	$T(n) = \theta (n \lg{n})$
+
+%% Conclusion %%
+
+\section{Conclusion}
+
+Don't use bubble sort unless you are using it to check to make sure an seemingly sorted list is completely sorted.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
