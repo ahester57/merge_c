@@ -46,21 +46,30 @@ int main(int argc, char** argv) {
 		method = "merge";
 	}
 
+
+
 	FILE* fq = fopen("./info.log", "a");
 	if (fq != NULL) {
-		fprintf(fq, "Method:\t%s\n", method);
-		fprintf(fq, "Size:\t%d\n", LENGTH);
-		fprintf(fq, "Time:\t%f\n", time_taken);
-		fprintf(fq, "---------------------------\n");
+		fprintf(fq, "\r\n---------------------------\r\n");
+		fprintf(fq, "Method:\t%s\r\n", method);
+		fprintf(fq, "Size:\t%d\r\n", LENGTH);
+		fprintf(fq, "Time:\t%e\r\n", time_taken);
+		fprintf(fq, "---------------------------\r\n");
 	}
 	fclose(fq);
 
 	FILE* fr = fopen("./sortedArray.log", "w");
 	if (fr != NULL) {
 		for (int i = 0; i < LENGTH; i++) {
-			fprintf(fr, "%d\n", A[i]);
+			fprintf(fr, "%d\r\n", A[i]);
 		}
 	}
+
+	printf("---------------------------------");
+	printf("\nMethod:\t%s\r\n", method);
+	printf("Size:\t%d\r\n", LENGTH);
+	printf("Time:\t%f\r\n", time_taken);
+	printf("---------------------------------");
 
 	fclose(fr);
 	free(A);
