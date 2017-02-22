@@ -1,9 +1,7 @@
 *.exe
-*k.rnd
+*.rnd
 merge
 bubble
 mkrand
-mkrand.exe
-*m.rnd
 _sortedArray.log
 _randomArray.rnd
