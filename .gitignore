@@ -3,5 +3,7 @@
 merge
 bubble
 mkrand
+mkrand.exe
 *m.rnd
-sortedArray.log
+_sortedArray.log
+_randomArray.rnd

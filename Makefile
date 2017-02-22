@@ -21,3 +21,4 @@ bubble: $(OBJECTS)
 clean:
 	-rm -f $(OBJECTS)
 	-rm -f merge bubble
+	-rm -f _sortedArray.log _randomArray.rnd
