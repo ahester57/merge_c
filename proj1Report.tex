@@ -62,7 +62,7 @@ Bubble sort took (literally) exponentially more time as the number of elements i
 
 Although this "sort constant" varies slightly from run to run, it can be used to successfully predict the time a certain
 execution will take. For example, I was able to predict a bubble sort of 2 million integers would take 2547s using
-the equation $t \approx \frac{n^2}{1.56e9}$.
+the equation $t \approx \frac{n^2}{1.56e9}$, and the actual time ended up being 2571s.
 
 \subsubsection{Worst-case}
 
@@ -80,7 +80,9 @@ terminates based on the sentinel, when no replacements occur. \\
 
 \subsubsection{Average-case}
 
-Average case 
+Average case  \\
+
+	$T(n) = \theta (n^2)$
 
 \newpage
 
@@ -90,25 +92,20 @@ Average case
 
 Merge sort never exceeded 1 second, even when sorting 2 million integers.\\
 
-From $T(n) = \theta (n \lg{n})$,the "sort constant," $c \approx \num{4.270e7}$ from $\frac{n \lg{n}}{t}$
+	From $T(n) = \theta (n \lg{n})$,the "sort constant," $c \approx \num{4.270e7}$ from $\frac{n \lg{n}}{t}$ \\
 
-\subsubsection{Worst-case}
+Again, this "sort constant" is able to predict (to a close enough extent) the expected run-time of a merge sort of $n$ elements.
+Using the equation $t \approx \frac{n \lg{n}}{4.27e7}$, with $n = 150k$, gives an expected run-time of 0.060s, which is 
+very close to the actual 0.062s.
 
-Worst case is: \\
+\subsubsection{Worst, Best, \& Average -case}
 
-	$T(n) = \theta (n \lg{n})$
+Worst, Best, and Average case is: \\
 
-\subsubsection{Best-case}
+	$T(n) = \theta (n \lg{n})$ \\
 
-Best case is: \\
-
-	$T(n) = \theta (n \lg{n})$
-
-\subsubsection{Average-case}
-
-Average case is: \\
-
-	$T(n) = \theta (n \lg{n})$
+However, when sorting $<$ 50k elements, I got a sort constant of $\approx \num{2.5e7}$, which implies that merge sort is more
+suitable for larger $n$. Merge sort still outperforms buble sort except when "sorting" a sorted list.
 
 %% Conclusion %%
 

@@ -5,3 +5,5 @@ bubble
 mkrand
 _sortedArray.log
 _randomArray.rnd
+*.pdf
+*.gz
